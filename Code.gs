@@ -116,7 +116,7 @@ function buildCustomerCard( emailAddress, orderDataForEmailAddress ) {
       .addWidget( buildKeyValueWidget( 'Email', emailAddress ?? '(No email)' ) )
       .addWidget( buildKeyValueWidget( 'Error', orderDataForEmailAddress.error ) );
 
-      builder.addSection();
+      builder.addSection( errorSection );
 
       return builder.build();
   }
@@ -125,11 +125,11 @@ function buildCustomerCard( emailAddress, orderDataForEmailAddress ) {
     const noOrdersSection = CardService.newCardSection()
       .setHeader( 'No Orders' )
       .addWidget(
-        CardService.newDecoratedText()
-          .setText( 'No orders for ' + emailAddress )
+        CardService.newTextParagraph()
+          .setText( 'No orders for <b>' + emailAddress + '</b>' )
       );
     
-    builder.addSection();
+    builder.addSection( noOrdersSection );
 
     return builder.build();
   }
