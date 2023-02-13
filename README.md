@@ -6,7 +6,7 @@ The add-on should work for users of the free Gmail service as well as Google Wor
 
 ## How do I get started?
 
-See (./instructions.md).
+See [instructions.md](instructions.md).
 
 ## How does it work?
 
