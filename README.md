@@ -15,3 +15,7 @@ The add-on is built using Google Apps Script and Google Cloud, but needs to be c
 At present, the recipe doesn't take into account any possible quotas or limits for Google Apps Script or Google Cloud usage, nor does the recipe go beyond setting up a test project.
 
 The actual recipe relies on the code in this project, some script-level configuration properties, and you having a WooCommerce install accessible via HTTPS.
+
+## Screenshot
+
+![Screenshot](screenshot1.png)
