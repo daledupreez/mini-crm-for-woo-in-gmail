@@ -1,0 +1,36 @@
+{
+  "timeZone": "Africa/Johannesburg",
+  "dependencies": {
+  },
+  "exceptionLogging": "STACKDRIVER",
+  "runtimeVersion": "V8",
+  "oauthScopes": [
+    "https://www.googleapis.com/auth/gmail.addons.current.message.readonly",
+    "https://www.googleapis.com/auth/gmail.addons.execute",
+    "https://www.googleapis.com/auth/script.external_request"
+  ],
+  "urlFetchWhitelist": [
+    "https://[YOUR-DOMAIN]/wp-json/wc/v3/"
+  ],
+  "addOns": {
+    "common": {
+      "name": "Sample Mini CRM for WooCommerce in Gmail",
+      "logoUrl": "https://raw.githubusercontent.com/daledupreez/mini-crm-for-woo-in-gmail/trunk/mini-crm-logo.png",
+      "homepageTrigger": {
+        "runFunction": "onHomePage",
+        "enabled": true
+      },
+      "openLinkUrlPrefixes": [
+        "https://[YOUR-DOMAIN]/"
+      ]
+    },
+    "gmail": {
+      "contextualTriggers": [
+        {
+          "unconditional": {},
+          "onTriggerFunction": "onGmailMessage"
+        }
+      ]
+    }
+  }
+}
